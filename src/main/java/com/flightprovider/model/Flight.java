@@ -1,14 +1,19 @@
 package com.flightprovider.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class BusinessFlight {
+public class Flight {
 	private String departure;
 	private String arrival;
 	private Long departureTime;
 	private Long arrivalTime;
 	
+	public Flight(String departure, String arrival, Long departureTime, Long arrivalTime) {
+		super();
+		this.departure = departure;
+		this.arrival = arrival;
+		this.departureTime = departureTime;
+		this.arrivalTime = arrivalTime;
+	}
+
 	public String getDeparture() {
 		return departure;
 	}
@@ -40,5 +45,5 @@ public class BusinessFlight {
 	public void setArrivalTime(Long arrivalTime) {
 		this.arrivalTime = arrivalTime;
 	}
-	
+
 }
